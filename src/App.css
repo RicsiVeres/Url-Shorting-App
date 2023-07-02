@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /*Primary*/
+  --Cyan: hsl(180, 66%, 49%);
+  --DarkViolet: hsl(257, 27%, 26%);
+  /*Secondary*/
+  --Red: hsl(0, 87%, 67%);
+  /*Neutral*/
+  --Gray: hsl(0, 0%, 75%);
+  --GrayishViolet: hsl(257, 7%, 63%);
+  --VeryDarkBlue: hsl(255, 11%, 22%);
+  --VeryDarkViolet: hsl(260, 8%, 14%);
+}
+* {
+  font-size: 18px;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+/*Desktop: 1440px*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 6%;
+}
+nav div {
+  display: flex;
+}
+nav div h1 {
+  font-size: 36px;
+  margin-right: 1.5rem;
+}
+nav div a {
+  color: var(--GrayishViolet);
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.8rem 1rem;
+}
+#SignUp {
+  background-color: var(--Cyan);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 2rem;
+  margin-top: 0.5rem;
+}
+.container {
+  margin: 5rem 6%;
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.container div div {
+  display: block;
+}
+.container div div h1 {
+  font-size: 64px;
+  color: var(--VeryDarkBlue);
+  line-height: 4rem;
+  max-width: 550px;
+  margin-top: 2rem;
+}
+.container div div p {
+  color: var(--GrayishViolet);
+  max-width: 450px;
+  margin-bottom: 2rem;
+}
+.container div div button {
+  color: #fff;
+  background-color: var(--Cyan);
+  border: 0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 1.5rem;
+  max-width: 450px;
+  margin-bottom: 2rem;
+}
+.container div {
+  display: flex;
+  justify-content: space-between;
+}
+.container div img {
+  margin-right: -15%;
+  zoom: 0.7;
+}
+.SearchBar {
+  background-image: url("./images/bg-shorten-desktop.svg");
+  background-color: var(--DarkViolet);
+  width: 100%;
+  height: 150px;
+  margin-top: 5rem;
+  border-radius: 0.8rem;
+}
+.SearchBar div {
+  margin: auto auto;
+}
+#btn {
+  margin: 2rem;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+}
+.SearchBar div input {
+  padding: 15px;
+  border: 1px solid var(--Cyan);
+  border-radius: 10px;
+  color: var(--DarkSlateGrey);
+  width: 650px;
+  margin-left: 2rem;
+}
+.AdvancedStatistics {
+  padding-top: 5rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.AdvancedStatistics .cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AdvancedStatistics .card {
+  flex: 1;
+  margin-right: 10px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  height: 250px;
+  width: 300px;
+  box-shadow: -9px 0px 38px -10px rgba(112, 112, 112, 0.37);
+}
+.card div {
+  background-color: var(--DarkViolet);
+  width: 2rem;
+  border-radius: 50%;
+  padding: 15px 18px 10px 15px;
+  text-align: center;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: -1.8rem;
+}
+.card h3 {
+  margin-top: 2.2rem;
+  padding-left: 1.5rem;
+}
+.card p {
+  padding: 1.5rem;
+  font-size: 14px;
+}
+#c2 {
+  margin-top: 3rem;
+}
+#c3 {
+  margin-top: 6rem;
+}
+h2 {
+  text-align: center;
+  font-size: 28px;
+}
+#ptag {
+  text-align: center;
+  margin: 1.5rem 25%;
+  margin-bottom: 5rem;
+  color: var(--GrayishViolet);
+}
+#center {
+  margin-bottom: 5rem;
+}
+.bg {
+  background-color: rgb(255, 249, 249);
+}
+.alsoresz {
+  background-image: url("./images/bg-boost-desktop.svg");
+  background-color: var(--DarkViolet);
+  background-size: cover;
+  background-position: center;
+  height: 225px;
+  background-repeat: no-repeat;
+  max-width: 100vmax;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.alsoresz div {
+  display: block;
+  text-align: center;
+  color: #fff;
+  padding-top: 4.5rem;
+}
+
+.alsoresz div h1 {
+  font-size: 24px;
+}
+.alsoresz div button {
+  color: #fff;
+  background-color: var(--Cyan);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.LabLec {
+  background-color: var(--VeryDarkViolet);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 8%;
+  padding-top: 4rem;
+  height: 250px;
+}
+li {
+  list-style: none;
+  margin: 0.6rem;
+  font-weight: 400;
+}
+b {
+  margin: 0.5rem;
+}
