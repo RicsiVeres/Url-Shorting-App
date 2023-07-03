@@ -1,13 +1,39 @@
-import { useState } from "react";
+import { useState, Ref, useRef, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import IllustrationWorking from "./images/illustration-working.svg";
 import BgShorten from "./images/bg-shorten-desktop.svg";
 import img1 from "./images/icon-brand-recognition.svg";
 import img2 from "./images/icon-detailed-records.svg";
 import img3 from "./images/icon-fully-customizable.svg";
+import logo from "./images/logo.svg";
 import "./App.css";
 
 function App() {
+  const [data, setData] = useState();
+
+  const url = useRef(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch(
+        `https://api.shrtco.de/v2/shorten?url=${url.current.value}`
+      );
+      const data = await response.json();
+      setData(data);
+      console.log(url.current.value);
+      console.log(data);
+      console.log(data.ok);
+    } catch (error) {
+      console.error("Hiba történt:", error);
+    }
+  };
+  const [text, setText] = useState("");
+
+  const handleCopy = (content) => {
+    navigator.clipboard.writeText(content);
+  };
+
   return (
     <>
       <nav>
@@ -38,12 +64,29 @@ function App() {
         </div>
         <div className="SearchBar">
           <div>
-            <input type="text" placeholder="Shorten a link here..." />
-            <button type="submit" id="btn">
-              Shorten It!
-            </button>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Shorten a link here..."
+                ref={url}
+              />
+              <button type="submit" id="btn">
+                Shorten It!
+              </button>
+            </form>
           </div>
         </div>
+        {data && data.ok ? (
+          <div id="resultbox">
+            <div className="result">
+              <h6>{data.result.short_link}</h6>
+              <p>{data.result.full_short_link}</p>
+              <a onClick={() => handleCopy(data.result.full_short_link)}>
+                Copy
+              </a>
+            </div>
+          </div>
+        ) : null}
       </div>
       <div className="bg">
         <div className="AdvancedStatistics">
@@ -100,7 +143,7 @@ function App() {
       </div>
       <div className="LabLec">
         <div>
-          <h1>Shortly</h1>
+          <img src={logo} />
         </div>
         <div>
           <b>Features</b>

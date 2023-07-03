@@ -212,7 +212,24 @@ li {
   list-style: none;
   margin: 0.6rem;
   font-weight: 400;
+  color: var(--GrayishViolet);
 }
 b {
   margin: 0.5rem;
+}
+#resultbox {
+  display: block;
+}
+#resultbox div {
+  display: flex;
+  margin: 1rem 6%;
+  color: var(--VeryDarkBlue);
+}
+#resultbox div a {
+  color: #fff;
+  background-color: var(--Cyan);
+  text-decoration: none;
+  padding: 0.5rem 1.3rem;
+  height: 100%;
+  border-radius: 10%;
 }
