@@ -9,6 +9,8 @@ import logo from "./images/logo.svg";
 import "./App.css";
 
 function App() {
+  const form = document.getElementById("form");
+
   const [data, setData] = useState();
 
   const url = useRef(null);
@@ -27,6 +29,11 @@ function App() {
     } catch (error) {
       console.error("Hiba történt:", error);
     }
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    if (!data.ok) {
+      form.style.border = "2px solid hsl(0, 87%, 67%)";
+      form.style.color = "hsl(0, 87%, 67%)";
+    }
   };
   const [text, setText] = useState("");
 
@@ -36,7 +43,39 @@ function App() {
 
   return (
     <>
-      <nav>
+      <nav role="navigation" id="mobile-view">
+        <h1 id="logo">Shortly</h1>
+
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="#">
+              <li>Features</li>
+            </a>
+            <a href="#">
+              <li>Pricing</li>
+            </a>
+            <a href="#">
+              <li>Resources</li>
+            </a>
+            <hr />
+            <div>
+              <a href="#" id="Login">
+                Login
+              </a>
+              <a href="#" id="SignUp">
+                Sign Up
+              </a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+
+      <nav id="pc-view">
         <div>
           <h1>Shortly</h1>
           <a href="#">Features</a>
@@ -50,8 +89,10 @@ function App() {
           </a>
         </div>
       </nav>
+
       <div className="container">
-        <div>
+        <div id="csere">
+          <img src={IllustrationWorking} />
           <div>
             <h1>More than just shorter links</h1>
             <p>
@@ -60,12 +101,12 @@ function App() {
             </p>
             <button>Get Started</button>
           </div>
-          <img src={IllustrationWorking} />
         </div>
-        <div className="SearchBar">
+        <div className="SearchBar" id="Search">
           <div>
             <form onSubmit={handleSubmit}>
               <input
+                id="form"
                 type="text"
                 placeholder="Shorten a link here..."
                 ref={url}
@@ -82,6 +123,20 @@ function App() {
               <h6>{data.result.short_link}</h6>
               <p>{data.result.full_short_link}</p>
               <a onClick={() => handleCopy(data.result.full_short_link)}>
+                Copy
+              </a>
+            </div>
+            <div className="result">
+              <h6>{data.result.short_link2}</h6>
+              <p>{data.result.full_short_link2}</p>
+              <a onClick={() => handleCopy(data.result.full_short_link2)}>
+                Copy
+              </a>
+            </div>
+            <div className="result">
+              <h6>{data.result.short_link3}</h6>
+              <p>{data.result.full_short_link3}</p>
+              <a onClick={() => handleCopy(data.result.full_short_link3)}>
                 Copy
               </a>
             </div>
@@ -138,7 +193,7 @@ function App() {
       <div className="alsoresz">
         <div>
           <h1>Boost your links today</h1>
-          <button>Get Started</button>
+          <button href="#Search">Get Started</button>
         </div>
       </div>
       <div className="LabLec">
