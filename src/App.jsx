@@ -198,7 +198,7 @@ function App() {
       </div>
       <div className="LabLec">
         <div>
-          <img src={logo} />
+          <h1>Shortly</h1>
         </div>
         <div>
           <b>Features</b>
@@ -219,11 +219,11 @@ function App() {
           <li>Careers</li>
           <li>Contact</li>
         </div>
-        <div>
-          <i>f</i>
-          <i>t</i>
-          <i>p</i>
-          <i>i</i>
+        <div className="socialmediaicons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-pinterest"></i>
+          <i class="fa fa-instagram"></i>
         </div>
       </div>
     </>

@@ -31,6 +31,93 @@
     font-size: 36px;
   }
 
+  #center h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 28px;
+  }
+  #center p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--GrayishViolet);
+  }
+
+  .card {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 80vw;
+    background-color: #dfeefa; /* ide kell m;g synt be'lltanom*/
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    padding: 1.3rem 1rem;
+  }
+  .card div img {
+    background: var(--DarkViolet);
+    padding: 1.3rem;
+    border-radius: 50%;
+  }
+  .card h3 {
+    margin: 1rem 0;
+  }
+  .card p {
+    color: var(--GrayishViolet);
+  }
+  .alsoresz {
+    background: url("./images/bg-boost-mobile.svg");
+    background-color: var(--DarkViolet);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+  }
+  .alsoresz div {
+    text-align: center;
+    padding: 135px 0;
+  }
+  .alsoresz div h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  .alsoresz div button {
+    color: #fff;
+    background-color: var(--Cyan);
+    border: 0;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.5rem;
+    max-width: 450px;
+  }
+
+  .LabLec {
+    background-color: var(--VeryDarkViolet);
+    text-align: center;
+  }
+  .LabLec div h1 {
+    color: #fff;
+    font-size: 24px;
+    padding: 2rem;
+  }
+  b {
+    color: #fff;
+  }
+  li {
+    color: var(--GrayishViolet);
+    list-style: none;
+    margin: 1rem;
+  }
+  li:hover {
+    color: var(--Cyan);
+  }
+  .socialmediaicons i {
+    color: #fff;
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
   #SignUp {
     background-color: var(--Cyan);
     color: #fff;
@@ -279,6 +366,10 @@
     border-radius: 2rem;
     margin-top: 0.5rem;
     cursor: pointer;
+  }
+  .socialmediaicons i {
+    color: #fff;
+    margin: 0.5rem;
   }
   #SignUp:hover {
     background-color: var(--hovere);
