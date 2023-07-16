@@ -519,7 +519,4 @@
     background-color: var(--DarkViolet);
     cursor: pointer;
   }
-  body {
-    overflow: hidden;
-  }
 }
