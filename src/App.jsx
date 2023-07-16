@@ -41,6 +41,8 @@ function App() {
     navigator.clipboard.writeText(content);
   };
 
+  
+
   return (
     <>
       <nav role="navigation" id="mobile-view">
